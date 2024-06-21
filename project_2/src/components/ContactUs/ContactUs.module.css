@@ -6,11 +6,12 @@
 }
 
 .contact_section h1 {
-    font-weight: 900;
+    font-weight: 800;
     font-size: 48px;
+    max-width: 80%;
 }
 
 .contact_section p {
-    font-weight: 600;
+    font-weight: 500;
     color: grey;
 }
