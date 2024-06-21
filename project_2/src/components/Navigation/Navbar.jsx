@@ -1,8 +1,9 @@
 // import React from 'react'
+import styles from "./Navbar.module.css"
 
 const Navbar = () => {
   return (
-    <nav className="navbar container">
+    <nav className={`${styles.navbar} container`}>
         <div className="nav-logo">
         <img src="/images/pngegg.png" alt="contact page logo"/>
         </div>

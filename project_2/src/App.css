@@ -10,17 +10,3 @@ body {
     margin: 0 auto;
     max-width: 1280px;
 }
-
-.navbar {
-    padding: 0 8px;
-    display: flex;
-    justify-content: space-between;
-    height: 72px;
-}
-
-.navbar ul {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-    font-weight: 500;
-}
