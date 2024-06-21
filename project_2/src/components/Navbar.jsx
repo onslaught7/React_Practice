@@ -2,7 +2,7 @@
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar container">
         <div className="nav-logo">
         <img src="/images/pngegg.png" alt="contact page logo"/>
         </div>
