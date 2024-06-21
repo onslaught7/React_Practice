@@ -7,6 +7,7 @@ function App() {
   return (
     <div>
       <Navbar/>
+      <contactHeader />
     </div>
   )
 }
