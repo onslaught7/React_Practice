@@ -1,4 +1,5 @@
 import Navbar from './components/Navigation/Navbar';
+import ContactHeader from './components/ContactHeader/ContactHeader';
 import './App.css'
 
 function App() {
@@ -7,9 +8,9 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <contactHeader />
+      <ContactHeader/>
     </div>
   )
 }
 
-export default App
+export default App;
