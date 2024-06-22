@@ -1,27 +1,11 @@
 import styles from "./ContactForm.module.css";
+import Button from "../Button/Button";
 
 const ContactForm = () => {
     return (
     <section className={`${styles.container}`}>
         <div className={`${styles.contact_form}`}>
-            <div className={`${styles.form_btn}`}>
-                <button className={`${styles.btn1}`}>
-                    <img src="/images/vector.png" alt=""/>
-                    <p> VIA CHAT SUPPORT</p>
-                </button>
-                <button className={`${styles.btn1}`}>
-                    <img src="/images/phone.png" alt=""/>
-                    <p> VIA CALL</p>
-                </button>
-                <button className={`${styles.btn2}`}>
-                    <img src="/images/msg.png" alt=""/>
-                    <p> VIA EMAIL FORM </p>
-                </button>
-            </div>
-
-            <div>
-
-            </div>
+            <Button/>
 
         </div>
 

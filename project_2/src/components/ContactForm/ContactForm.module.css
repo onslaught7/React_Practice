@@ -11,30 +11,3 @@
     gap: 80px;
 }
 
-.form_btn {
-    display: flex;
-    max-width: 472px;
-    justify-content: space-between;
-    gap: 32px;
-}
-
-.btn1 {
-    display: flex;
-    background-color: black;
-    color: aliceblue;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    border: none;
-    width: 220px;
-    height: 40px;
-}
-
-.btn2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    width: 220px;
-    height: 40px;
-}
