@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar/Navbar";
-import ContactUs from "./components/ContactUs/ContactUs"
+import ContactUs from "./components/ContactUs/ContactUs";
+import ContactForm from "./components/ContactForm/ContactForm";
 import './App.css'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div>
       <Navbar />
       <ContactUs />
+      <ContactForm />
     </div>
   )
 }
