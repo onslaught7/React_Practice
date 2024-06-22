@@ -1,0 +1,12 @@
+.primary_btn {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 10px;
+    min-width: 220px;
+    gap: 0.5rem;
+}

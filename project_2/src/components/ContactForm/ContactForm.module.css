@@ -4,10 +4,10 @@
     margin: 0 auto;
     margin-top: 40px;
     align-items: end;
-
 }
 
 .contact_form {
+    display: flex;
     gap: 80px;
 }
 
