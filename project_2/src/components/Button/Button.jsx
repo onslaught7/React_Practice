@@ -1,11 +1,12 @@
 import styles from "./Button.module.css";
 
 const Button = (props) => {
+  const {isBtn1, icon, text} = props;
   return ( 
-    <button className={props.isBtn1 ? styles.primary_btn_1 : styles.primary_btn_2}
+    <button className={isBtn1 ? styles.primary_btn_1 : styles.primary_btn_2}
     >
-       {props.icon}
-       {props.text}
+       {icon}
+       {text}
     </button>
   );
 };
