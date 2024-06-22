@@ -1,8 +1,6 @@
 .contact_section {
-    display: flex;
-    flex-direction: column;
     max-width: 1000px;
-    margin-top: 72px;
+    margin: 0 auto;
 }
 
 .contact_section h1 {
