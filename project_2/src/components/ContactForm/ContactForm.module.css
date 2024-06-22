@@ -6,8 +6,13 @@
     align-items: end;
 }
 
-.contact_form {
+.top_btns {
     display: flex;
-    gap: 80px;
+    gap: 2rem;
+}
+
+.bottom_btns {
+    display: flex;
+    margin-top: 17px;
 }
 

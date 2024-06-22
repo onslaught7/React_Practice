@@ -1,4 +1,4 @@
-.primary_btn {
+.primary_btn_1 {
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -9,4 +9,21 @@
     padding: 12px 10px;
     min-width: 220px;
     gap: 0.5rem;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.primary_btn_2 {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 12px 10px;
+    min-width: 472px;
+    gap: 0.5rem;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid black;
 }

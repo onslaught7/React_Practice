@@ -2,7 +2,8 @@ import styles from "./Button.module.css";
 
 const Button = (props) => {
   return ( 
-    <button className={`${styles.primary_btn}`}>
+    <button className={props.isBtn1 ? styles.primary_btn_1 : styles.primary_btn_2}
+    >
        {props.icon}
        {props.text}
     </button>
