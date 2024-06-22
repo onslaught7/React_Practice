@@ -29,3 +29,13 @@
     border: 1px solid black;
     cursor: pointer;
 }
+
+.primary_btn_1:active, .primary_btn_2:active {
+    transform: scale(0.95); 
+    opacity: 0.8; 
+}
+
+.primary_btn_1:focus, .primary_btn_2:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(2, 238, 255, 0.815);
+}
