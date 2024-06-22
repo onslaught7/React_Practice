@@ -1,8 +1,10 @@
 import styles from "./Button.module.css";
 
-const Button = ({isBtn1, icon, text}) => {
+const Button = ({isBtn1, icon, text, ...rest}) => {
   return ( 
-    <button className={isBtn1 ? styles.primary_btn_1 : styles.primary_btn_2}
+    <button 
+    {...rest}
+    className={isBtn1 ? styles.primary_btn_1 : styles.primary_btn_2}
     >
        {icon}
        {text}

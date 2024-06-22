@@ -5,16 +5,31 @@ import { IoMdCall } from "react-icons/io";
 import { MdOutlineMailOutline } from "react-icons/md";
 
 const ContactForm = () => {
+
+    const handleCall = () => {
+        console.log("Call me +91 7735458624");
+    }
+
+    const handleChat = () => {
+        console.log("Text me +91 7735458624");
+    }
+
+    const handleMail = () => {
+        console.log("Mail me @game.isthegame");
+    }
+
     return (
     <section className={`${styles.container}`}>
         <div className={`${styles.contact_form}`}>
             <div className={`${styles.top_btns}`}>
                 <Button 
+                    onClick={handleChat}
                     isBtn1 = {true}
                     text="VIA SUPPORT CHAT" 
                     icon={<MdMessage fontSize="24px"/>}
                 />
                 <Button 
+                    onClick={handleCall}
                     isBtn1 = {true}
                     text="VIA CALL" 
                     icon={<IoMdCall fontSize="24px"/>}
@@ -23,6 +38,7 @@ const ContactForm = () => {
 
             <div className={`${styles.bottom_btns}`}>
                 <Button 
+                    onClick={handleMail}
                     text="VIA EMAIL FORM"
                     icon={<MdOutlineMailOutline fontSize="24px"/>}
                 />
