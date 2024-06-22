@@ -6,6 +6,12 @@
     align-items: end;
 }
 
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .top_btns {
     display: flex;
     gap: 2rem;
@@ -13,6 +19,32 @@
 
 .bottom_btns {
     display: flex;
-    margin-top: 17px;
 }
 
+.form_input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contact_form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.form_input input {
+    height: 40px;
+    padding: 0 8px;
+}
+
+.form_input label {
+    position: absolute;
+    top: -11px;
+    left: 10px;
+    background-color: white;
+    padding: 0 8px;
+    font-size: 14px;
+}

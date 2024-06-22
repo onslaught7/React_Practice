@@ -27,10 +27,36 @@ const ContactForm = () => {
                     icon={<MdOutlineMailOutline fontSize="24px"/>}
                 />
             </div>
+
+            <form>
+                <div className={styles.form_input}>
+                    <label htmlFor="name">Name</label>
+                    <input type="text" name="name"/>
+                </div>
+                <div className={styles.form_input}>
+                    <label htmlFor="email">Email</label>
+                    <input type="text" name="name"/>
+                </div>
+                <div className={styles.form_input}>
+                    <label htmlFor="text">Text</label>
+                    <textarea type="text" rows="8" name="message"/>
+                </div>
+
+                {/* when you wrap a buutton in div it doesn't take full width */}
+                <div style={{
+                    display: "flex",
+                    justifyContent: "end",
+                    }}>
+                    <Button 
+                        isBtn1 = {true}
+                        text="SUBMIT" 
+                    />
+                </div>
+            </form>
         </div>
 
         <div className={`${styles.form_image}`}>
-            {/* <img src=""/> */}
+            <img src="/images/contact.svg" alt="contact image"/>
         </div>
     </section> 
 
