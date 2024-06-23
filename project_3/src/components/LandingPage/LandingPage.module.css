@@ -1,6 +1,8 @@
 .conainer_LandingPage {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    height: 100vh;
 }
 
 .img_dice {
@@ -8,6 +10,10 @@
 }
 
 .text_dice {
+    display: flex;
+    flex-direction: column;
     font-size: 96px;
     font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }

@@ -10,6 +10,7 @@ const LandingPage = () => {
 
         <div className={styles.text_dice}>
             <p>DICE GAME</p>
+            <button>Play Now</button>
         </div>
     </div>
   );
