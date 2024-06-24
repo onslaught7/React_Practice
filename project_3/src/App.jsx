@@ -6,7 +6,7 @@ import './App.css';
 const App = () => {
   return (
     <div>
-      <LandingPage />
+      {/* <LandingPage /> */}
       <PlayPage />
     </div>
   );
