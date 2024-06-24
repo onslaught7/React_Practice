@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './LandingPage.module.css'
+import Button from '../Button/Button'
 
 const LandingPage = () => {
   return (
@@ -10,7 +11,9 @@ const LandingPage = () => {
 
         <div className={styles.text_dice}>
             <p>DICE GAME</p>
-            <button>Play Now</button>
+            <Button
+              text="Play Now"
+            />
         </div>
     </div>
   );
