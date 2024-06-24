@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './LandingPage.module.css'
 import Button from '../Button/Button'
+import { BsDice1 } from "react-icons/bs";
 
 const LandingPage = () => {
   return (
@@ -12,7 +13,8 @@ const LandingPage = () => {
         <div className={styles.text_dice}>
             <p>DICE GAME</p>
             <Button
-              text="Play Now"
+              icon={<BsDice1 fontSize="20px"/>}
+              text="PLAY NOW"
             />
         </div>
     </div>
