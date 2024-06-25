@@ -13,9 +13,12 @@ const PlayPage = () => {
         </div>
 
         <div className={styles.num_select}>
-          {btnNums.map(number => (
-            <button key={number}>{number}</button>
-          ))}
+          <div className={styles.select_btns}>
+            {btnNums.map(number => (
+              <button key={number}>{number}</button>
+            ))}
+          </div>
+          <p>Select Number</p>
         </div>
       </div>
 
