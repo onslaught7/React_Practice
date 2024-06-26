@@ -1,16 +1,38 @@
+/* Fade-in effect for the entire play page */
 .playpage_container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0; /* Initial state for fade-in */
+    animation: fadeIn 1s forwards; /* Fade-in animation */
 }
 
+/* Keyframes for the fade-in effect */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in from left for the top section */
 .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 62px; 
     gap: 593px;
+    opacity: 0; /* Initial state for slide-in */
+    transform: translateX(-100px); /* Start slightly off-screen */
+    animation: slideInLeft 0.5s forwards 0.3s; /* Slide-in animation with delay */
+}
+
+/* Keyframes for the slide-in from left */
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .score {
@@ -38,7 +60,8 @@
     flex-direction: column;
     align-items: end;
     line-height: 2px;
-    /* margin-top: 100px; */
+    opacity: 0; /* Initial state for fade-in */
+    animation: fadeIn 0.5s forwards 1s; /* Fade-in animation with delay */
 }
 
 .error_msg {
@@ -47,7 +70,7 @@
     margin: 0;
 }
 
-.num_select p{
+.num_select p {
     font-size: 24px;
     font-weight: 600;
 }
@@ -57,38 +80,44 @@
     gap: 1.5rem;
 }
 
-.select_btns button{
+/* Apply smooth transition effects to buttons */
+.select_btns button {
     color: black;
     background-color: white;
     width: 72px;
     height: 72px;
     font-size: 24px;
     font-weight: 600;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;
+    transition: box-shadow 0.3s, transform 0.3s, color 0.3s, background-color 0.3s;
 }
 
 .select_btns button:hover, .select_btns button:focus, .select_btns button:active {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
     transform: scale(1.1);
     color: white;
     background-color: black;
     border: none;
 }
 
-
-
+/* Slide-in from bottom for play area */
 .play_area {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 24px; */
+    opacity: 0; /* Initial state for slide-in */
+    transform: translateY(50px); /* Start slightly off-screen */
+    animation: slideInUp 1s forwards 1s; /* Slide-in animation with delay */
 }
 
-.play_area p{
+/* Keyframes for the slide-in from bottom */
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.play_area p {
     font-size: 24px;
     font-weight: 600;
 }
@@ -97,15 +126,31 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    animation: fadeIn 1s forwards 2s; /* Fade-in animation with delay */
 }
 
 .rules {
     background-color: rgb(216, 173, 173);
     padding: 10px 20px;
     margin-top: 2rem;
+    opacity: 0; /* Initial state for fade-in */
+    transform: translateY(50px); /* Start slightly off-screen */
+    animation: slideInUp 1s forwards 2s; /* Slide-in animation with delay */
 }
 
-.rules p{
+.rules p {
     font-size: 12px;
     line-height: 0.75rem;
+}
+
+/* Keyframes for the scale-up effect */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
