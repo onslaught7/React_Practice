@@ -13,6 +13,7 @@ const PlayPage = () => {
         </div>
 
         <div className={styles.num_select}>
+          <p className={styles.error_msg}>You have not selected any number</p>
           <div className={styles.select_btns}>
             {btnNums.map(number => (
               <button key={number}>{number}</button>
