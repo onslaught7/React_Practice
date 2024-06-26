@@ -23,7 +23,18 @@ const PlayPage = () => {
       </div>
 
       <div className={styles.play_area}>
-
+            <img src="/images/dice_1.png"/>
+            <p>Click on Dice to roll</p>
+            <div className={styles.btns}>
+              <Button
+                isBtn2 ={false}
+                text="Reset Score" 
+              />
+              <Button
+                isBtn2={true}
+                text="Show Rules"
+              />
+            </div>
       </div>
     </div>
   );
