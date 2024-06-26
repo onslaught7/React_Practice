@@ -92,3 +92,14 @@
     flex-direction: column;
     gap: 24px;
 }
+
+.rules {
+    background-color: rgb(216, 173, 173);
+    padding: 10px 20px;
+    margin-top: 2rem;
+}
+
+.rules p{
+    font-size: 12px;
+    line-height: 0.75rem;
+}
