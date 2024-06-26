@@ -1,8 +1,11 @@
 import styles from './PlayPage.module.css'
 import Button from '../Button/Button'
+import { useState } from 'react'
 
 const PlayPage = () => {
   const btnNums = [1, 2, 3, 4, 5, 6];
+
+  const [showRules, handleShowRules] = useState(false)
 
   return (
     <div className={`${styles.playpage_container} container`}>
@@ -28,21 +31,28 @@ const PlayPage = () => {
             <p>Click on Dice to roll</p>
             <div className={styles.btns}>
               <Button
+                
                 isBtn2 ={true}
                 text="Reset Score" 
               />
               <Button
+                onClick={() => handleShowRules(!showRules)}
                 text="Show Rules"
               />
             </div>
 
-            <div className={styles.rules}>
-              <h3>How to play dice game</h3>
-              <p>Select any number</p>
-              <p>Click on dice image</p>
-              <p>after click on  dice  if selected number is equal to dice number you will get same point as dice after click on  dice  if selected number is equal to dice number you will get same point as dice </p>
-              <p>if you get wrong guess then  2 point will be dedcuted</p>
-            </div>
+            {
+              showRules ?  (
+                <div className={styles.rules}>
+                  <h3>How to play dice game</h3>
+                  <p>Select any number</p>
+                  <p>Click on dice image</p>
+                  <p>after click on  dice  if selected number is equal to dice number you will get same point as dice after click on  dice  if selected number is equal to dice number you will get same point as dice </p>
+                  <p>if you get wrong guess then  2 point will be dedcuted</p>
+                </div> ) : (
+                  <div></div>
+                )
+            }
       </div>
     </div>
   );

@@ -131,9 +131,6 @@
     background-color: rgb(216, 173, 173);
     padding: 10px 20px;
     margin-top: 2rem;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: slideInUp 1s forwards 2s;
 }
 
 .rules p {
