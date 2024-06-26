@@ -27,11 +27,10 @@ const PlayPage = () => {
             <p>Click on Dice to roll</p>
             <div className={styles.btns}>
               <Button
-                isBtn2 ={false}
+                isBtn2 ={true}
                 text="Reset Score" 
               />
               <Button
-                isBtn2={true}
                 text="Show Rules"
               />
             </div>

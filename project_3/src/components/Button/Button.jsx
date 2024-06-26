@@ -4,7 +4,7 @@ const Button = ({isBtn2, icon, text, ...rest}) => {
   return (
     <button 
       {...rest}
-      className={isBtn2 ? styles.btn : styles.btn2}
+      className={isBtn2 ? styles.btn2 : styles.btn}
     >
         {icon}
         {text}
