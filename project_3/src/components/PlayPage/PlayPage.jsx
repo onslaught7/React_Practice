@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const PlayPage = () => {
   const btnNums = [1, 2, 3, 4, 5, 6];
-  let num = 7
+  
   // Stores and updates the number that the user selects
   const [numSelect, handleNumSelect] = useState(0)
 
@@ -14,12 +14,23 @@ const PlayPage = () => {
   // Dynamically switch the image paths when the image is clickked
   const [imgPath, setImgPath] = useState('/images/dice_1.png')
 
+  // Handling the errorMessage
+  const [errorMessage, setErrorMessage] = useState(false)
+
   function updateImagePath () {
-      num = Math.floor(Math.random()*6) + 1
 
+    console.log(numSelect)
+    if(numSelect >= 1 && numSelect  <= 6) {
+      
+      const num = Math.floor(Math.random()*6) + 1
       setImgPath(`/images/dice_${num}.png`)
-
-      console.log(imgPath)
+      setErrorMessage(false)
+      handleNumSelect(0)
+    } else {
+      setErrorMessage(true)
+    }
+    
+    
   }
 
   return (
@@ -31,13 +42,18 @@ const PlayPage = () => {
         </div>
 
         <div className={styles.num_select}>
-          <p className={styles.error_msg}>You have not selected any number</p>
+        {
+          errorMessage && (
+            <p className={styles.error_msg}>You have not selected any number</p>
+          )
+        }
           <div className={styles.select_btns}>
             {btnNums.map(number => (
               <button 
               key={number} 
               onClick={() => {
                 handleNumSelect(number)
+                setErrorMessage(false)
                 }}
               >                
                 {number}
