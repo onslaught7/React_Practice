@@ -20,25 +20,41 @@ const PlayPage = () => {
   // Handling the errorMessage
   const [errorMessage, setErrorMessage] = useState(false)
 
+  // Dynamically update the score
+  const [score, setScore] = useState(0)
+
   function updateImagePath () {
     if(numSelect >= 1 && numSelect  <= 6) {
-      
       setRandomNum(Math.floor(Math.random()*6) + 1)
       setImgPath(`/images/dice_${randomNum}.png`)
       setErrorMessage(false)
+      updateScore()
       handleNumSelect(0)
+
     } else {
       setErrorMessage(true)
+    }
+  }
+
+  function updateScore () {
+    if(randomNum === numSelect) {
+      setScore(score + 2)
+    } else {
+      setScore(score - 2)
     }
   }
 
   return (
     <div className={`${styles.playpage_container} container`}>
       <div className={styles.top}>
-        <div className={styles.score}>
-          <h1>0</h1>
-          <p>Total Score</p>
-        </div>
+        {
+          !errorMessage && (
+            <div className={styles.score}>
+            <h1>{score}</h1>
+            <p>Total Score</p>
+            </div>
+          )
+        }
 
         <div className={styles.num_select}>
         {
