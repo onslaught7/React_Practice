@@ -48,12 +48,10 @@ const PlayPage = () => {
     <div className={`${styles.playpage_container} container`}>
       <div className={styles.top}>
         {
-          !errorMessage && (
-            <div className={styles.score}>
-            <h1>{score}</h1>
-            <p>Total Score</p>
-            </div>
-          )
+          <div className={styles.score}>
+          <h1>{score}</h1>
+          <p>Total Score</p>
+          </div> 
         }
 
         <div className={styles.num_select}>
@@ -84,7 +82,7 @@ const PlayPage = () => {
             <p>Click on Dice to roll</p>
             <div className={styles.btns}>
               <Button
-                
+                onClick={() => setScore(0)}
                 isBtn2 ={true}
                 text="Reset Score" 
               />
