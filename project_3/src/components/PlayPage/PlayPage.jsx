@@ -4,8 +4,23 @@ import { useState } from 'react'
 
 const PlayPage = () => {
   const btnNums = [1, 2, 3, 4, 5, 6];
+  let num = 7
+  // Stores and updates the number that the user selects
+  const [numSelect, handleNumSelect] = useState(0)
 
+  // Updates the state of the page based on whether the user clicked show rules
   const [showRules, handleShowRules] = useState(false)
+
+  // Dynamically switch the image paths when the image is clickked
+  const [imgPath, setImgPath] = useState('/images/dice_1.png')
+
+  function updateImagePath () {
+      num = Math.floor(Math.random()*6) + 1
+
+      setImgPath(`/images/dice_${num}.png`)
+
+      console.log(imgPath)
+  }
 
   return (
     <div className={`${styles.playpage_container} container`}>
@@ -19,7 +34,14 @@ const PlayPage = () => {
           <p className={styles.error_msg}>You have not selected any number</p>
           <div className={styles.select_btns}>
             {btnNums.map(number => (
-              <button key={number}>{number}</button>
+              <button 
+              key={number} 
+              onClick={() => {
+                handleNumSelect(number)
+                }}
+              >                
+                {number}
+              </button>
             ))}
           </div>
           <p>Select Number</p>
@@ -27,7 +49,7 @@ const PlayPage = () => {
       </div>
 
       <div className={styles.play_area}>
-            <img src="/images/dice_1.png"/>
+            <img onClick={updateImagePath} src={imgPath}/>
             <p>Click on Dice to roll</p>
             <div className={styles.btns}>
               <Button
