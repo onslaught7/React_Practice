@@ -18,7 +18,7 @@
     cursor: pointer;
 }
 
-.btn:hover, .btn:focus, .btn:active {
+.btn:hover, .btn:active {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.03);
     transform: scale(1.03);
@@ -44,7 +44,7 @@
     cursor: pointer;
 }
 
-.btn2:hover, .btn2:focus, .btn2:active {
+.btn2:hover, .btn2:active {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.03);
     transform: scale(1.03);

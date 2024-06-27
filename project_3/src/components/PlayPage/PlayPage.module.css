@@ -3,6 +3,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    width: 100%;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 .top {
@@ -11,6 +21,16 @@
     align-items: center;
     margin-top: 62px; 
     gap: 593px;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideInLeft 0.5s forwards 0.3s;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .score {
@@ -38,7 +58,8 @@
     flex-direction: column;
     align-items: end;
     line-height: 2px;
-    /* margin-top: 100px; */
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 1s;
 }
 
 .error_msg {
@@ -47,7 +68,7 @@
     margin: 0;
 }
 
-.num_select p{
+.num_select p {
     font-size: 24px;
     font-weight: 600;
 }
@@ -57,38 +78,43 @@
     gap: 1.5rem;
 }
 
-.select_btns button{
+.select_btns button {
     color: black;
     background-color: white;
     width: 72px;
     height: 72px;
     font-size: 24px;
     font-weight: 600;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;
+    transition: box-shadow 0.3s, transform 0.3s, color 0.3s, background-color 0.3s;
 }
 
-.select_btns button:hover, .select_btns button:focus, .select_btns button:active {
+.select_btns button:hover,
+.select_btns button:focus,
+.select_btns button:active {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
     transform: scale(1.1);
     color: white;
     background-color: black;
     border: none;
 }
 
-
-
 .play_area {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 24px; */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideInUp 1.5s forwards 1s;
 }
 
-.play_area p{
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.play_area p {
     font-size: 24px;
     font-weight: 600;
 }
@@ -97,6 +123,8 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 2s;
 }
 
 .rules {
@@ -105,7 +133,18 @@
     margin-top: 2rem;
 }
 
-.rules p{
+.rules p {
     font-size: 12px;
     line-height: 0.75rem;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

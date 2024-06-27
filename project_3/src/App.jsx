@@ -4,10 +4,17 @@ import PlayPage from './components/PlayPage/PlayPage';
 import './App.css';
 
 const App = () => {
+  const [currentPage, setCurrentPage] = useState('landing');
+
   return (
     <div>
-      {/* <LandingPage /> */}
-      <PlayPage />
+      {
+        currentPage === 'landing' ? (
+          <LandingPage onPlayClick={() => setCurrentPage('play')}/>
+        ) : (
+          <PlayPage />
+        )
+      }
     </div>
   );
 };
