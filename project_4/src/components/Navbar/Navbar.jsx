@@ -3,14 +3,16 @@ import Button from '../Button/Button'
 import styles from './Navbar.module.css'
 import { LuMenuSquare } from "react-icons/lu";
 import { MdOutlineDeliveryDining } from "react-icons/md";
-import { BsQuestionSquare } from "react-icons/bs";
+import { FaRegCircleQuestion } from "react-icons/fa6";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
+import { MdAccountCircle } from "react-icons/md";
+import { BiSolidDish } from "react-icons/bi";
 
 
 const Navbar = () => {
     const icons = [
     <LuMenuSquare />, <MdOutlineDeliveryDining />,
-    <BsQuestionSquare />, <MdOutlineMarkEmailUnread />
+    <FaRegCircleQuestion />, <MdOutlineMarkEmailUnread />
     ]
 
     const btnNames = ['Menu', 'Delivery', 'About', 'Contact']
@@ -34,8 +36,14 @@ const Navbar = () => {
             </div>
 
             <div className={styles.user}>
-                <button></button>
-                <button></button>
+                <Button 
+                    isBtn2={true}
+                    icon={<MdAccountCircle />}
+                />
+                <Button 
+                    isBtn2={true}
+                    icon={<BiSolidDish />}
+                />
             </div>
         </nav>
   )

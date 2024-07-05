@@ -1,11 +1,11 @@
 .btn1{
   color: var(--clr1);
   border: none;
+  border-radius: 3rem;
   background-color: transparent;
   display: flex;
   cursor: pointer;
-  border: 2px solid var(--clr1);
-  border-radius: 20px;
+  border: none;
   font-size: 1.2rem;
   min-width: 8rem;
   align-items: center;
@@ -13,4 +13,31 @@
   min-height: 3rem;
   gap: 10px;
   font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn1:hover {
+    color: var(--clr3);
+    background-color: var(--clr1);
+}
+
+.btn2{
+    color: var(--clr1);
+    border: 1px solid var(--clr1);
+    background-color: transparent;
+    display: flex;
+    cursor: pointer;
+    min-width: 50px;
+    min-height: 50px;
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn2:hover {
+    color: var(--clr3);
+    background-color: var(--clr1);
 }
