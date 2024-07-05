@@ -1,0 +1,16 @@
+.btn1{
+  color: var(--clr1);
+  border: none;
+  background-color: transparent;
+  display: flex;
+  cursor: pointer;
+  border: 2px solid var(--clr1);
+  border-radius: 20px;
+  font-size: 1.2rem;
+  min-width: 8rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  gap: 10px;
+  font-weight: 600;
+}
