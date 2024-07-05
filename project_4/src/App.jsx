@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Navbar from './components/Navbar/Navbar.jsx'
 import  LandingPage from '../src/components/LandingPage/LandingPage.jsx'
 import  Description from '../src/components/Description/Description'
 import  PopularityPage from '../src/components/PopularityPage/PopularityPage'
@@ -9,10 +10,11 @@ function App() {
 
   return (
     <div>
-      <LandingPage />
-      <Description />
+      <Navbar/>
+      {/* <LandingPage /> */}
+      {/* <Description />
       <PopularityPage />
-      <ContactUs />
+      <ContactUs /> */}
     </div>
   )
 }
