@@ -1,11 +1,13 @@
 .ldnPage {
-    
+    display: flex;
+    width: 100%;
 }
 
 .greetings {
     display: flex;
     flex-direction: column;
     max-width: 1200px;
+    min-width: 1200px;
 }
 
 .greetings h1 {
@@ -62,5 +64,12 @@
 }
 
 .greetImg {
+    margin-top: 7rem;
+    overflow-x: hidden;
+    min-width: 610px;
+    margin-left: -2rem;
+}
 
+.greetImg img {
+    width: 39rem;
 }

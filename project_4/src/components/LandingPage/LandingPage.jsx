@@ -23,7 +23,7 @@ const LandingPage = () => {
       </div>
 
       <div className={styles.greetImg}>
-        {/* <img src="/images/logo.png"/> */}
+        <img src="/images/food1.png"/>
       </div>
     </div>
   )
