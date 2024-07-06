@@ -13,6 +13,8 @@ const LandingPage = () => {
         Welcome to <img src="/images/logo_txt.png" alt="Restaurant Name"/> 
         - a place which serves more than just a meal.
         A feast that nourishes your hunger, heart, and soul. 
+        Experience culinary delights crafted with love, 
+        where every bite tells a story and every meal becomes a cherished memory. 
         </p>
         <button>
           <LuMenuSquare />

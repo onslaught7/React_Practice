@@ -11,7 +11,7 @@
 .greetings h1 {
     color: var(--clr2);
     font-size: 120px;
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
     line-height: 150px;
 }
 
@@ -23,10 +23,10 @@
 
 .greetings p {
     color: var(--clr3);
-    font-size: 25px;
+    font-size: 22px;
     margin: 0;
     padding: 0;
-    max-width: 700px;
+    max-width: 750px;
 }
 
 .greetings button {

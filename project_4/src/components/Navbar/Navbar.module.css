@@ -16,7 +16,6 @@
     gap: 1.2rem;
     border: 1px solid var(--clr2);
     border-radius: 40px;
-    min-width: 36rem;
 }
 
 .user {
