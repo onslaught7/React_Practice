@@ -15,7 +15,7 @@ const Navbar = () => {
     <FaRegCircleQuestion />, <MdOutlineMarkEmailUnread />
     ]
 
-    const btnNames = ['Menu', 'Delivery', 'About', 'Contact']
+    const btnNames = ['MENU', 'DELIVERY', 'ABOUT', 'CONTACT']
 
     return (
         <nav className={`${styles.navbar} container`}>
