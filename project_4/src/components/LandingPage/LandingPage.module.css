@@ -1,0 +1,34 @@
+.ldnPage {
+    
+}
+
+.greetings {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+}
+
+.greetings h1 {
+    color: var(--clr2);
+    font-size: 120px;
+    margin-bottom: 0;
+    line-height: 150px;
+}
+
+.greetings p {
+    color: var(--clr3);
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    max-width: 700px;
+}
+
+.greetings p img {
+    width: 120px;
+    padding: 0;
+    margin: 0;
+}
+
+.greetImg {
+
+}

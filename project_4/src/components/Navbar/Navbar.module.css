@@ -14,7 +14,7 @@
 .navBtns {
     display: flex;
     gap: 1.2rem;
-    border: 1px solid var(--clr1);
+    border: 1px solid var(--clr2);
     border-radius: 40px;
 }
 
