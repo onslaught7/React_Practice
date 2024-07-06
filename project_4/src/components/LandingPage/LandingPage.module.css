@@ -66,10 +66,10 @@
 .greetImg {
     margin-top: 7rem;
     overflow-x: hidden;
-    min-width: 610px;
+    min-width: 628px;
     margin-left: -2rem;
 }
 
 .greetImg img {
-    width: 39rem;
+    width: 40rem;
 }
