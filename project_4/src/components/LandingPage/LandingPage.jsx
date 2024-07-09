@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './LandingPage.module.css'
 import { LuMenuSquare } from "react-icons/lu";
-import { GiIndianPalace } from "react-icons/gi";
 import { GiLindenLeaf } from "react-icons/gi";
 
 const LandingPage = () => {
