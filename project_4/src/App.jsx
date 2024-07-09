@@ -10,9 +10,8 @@ function App() {
 
   return (
     <div>
-      <Navbar />
-      <LandingPage />
-      {/* <Description /> */}
+      {/* <LandingPage /> */}
+      <Description />
       {/* <PopularityPage /> */}
       {/* <ContactUs /> */}
     </div>

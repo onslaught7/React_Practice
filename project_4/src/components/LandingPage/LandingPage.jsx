@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './LandingPage.module.css'
+import Navbar from '../Navbar/Navbar';
 import { LuMenuSquare } from "react-icons/lu";
 import { GiLindenLeaf } from "react-icons/gi";
 import Button from '../Button/Button';
@@ -7,6 +8,7 @@ import Button from '../Button/Button';
 const LandingPage = () => {
   return (
     <div>
+    <Navbar />
       <div className={`${styles.ldnPage} container`}>
         <div className={styles.greetings}>
           <h1>YOUR INDIAN <GiLindenLeaf className={styles.leaf}/> CULINARY DREAM</h1>
