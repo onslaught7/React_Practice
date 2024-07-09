@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './LandingPage.module.css'
 import { LuMenuSquare } from "react-icons/lu";
 import { GiLindenLeaf } from "react-icons/gi";
+import Button from '../Button/Button';
 
 const LandingPage = () => {
   return (
@@ -15,10 +16,12 @@ const LandingPage = () => {
         Experience culinary delights crafted with love, 
         where every bite tells a story and every meal becomes a cherished memory. 
         </p>
-        <button>
-          <LuMenuSquare />
-          ORDER NOW
-        </button>
+
+        <Button 
+          buttonType="btn3"
+          icon={<LuMenuSquare />}
+          text={"ORDER NOW"}
+        />
       </div>
 
       <div className={styles.greetImg}>

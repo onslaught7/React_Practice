@@ -34,10 +34,42 @@
     justify-content: center;
     font-weight: 600;
     border-radius: 50px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   .btn2:hover {
     color: var(--clr4);
     background-color: var(--clr2);
+}
+
+.btn3 {
+  color: var(--clr3);
+  border: none;
+  border-radius: 3rem;
+  background-color: var(--clr2);
+  display: flex;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  max-width: 12rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  gap: 10px;
+  font-weight: 600;
+  margin-top: 3rem;
+  box-shadow: -4px 5px 2px rgb(100, 53, 34);
+  transition: all 0.3s ease;
+  transition: transform 0.1s ease;
+}
+
+.btn3:hover {
+  /* background-color: var(--clr3); 
+  color: var(--clr2);  */
+  transform: scale(1.05); 
+  box-shadow: -9px 6px 4px rgb(100, 53, 34);
+}
+
+.btn3:active {
+  transform: scale(0.96)
 }

@@ -28,6 +28,7 @@ const Navbar = () => {
                     btnNames.map((name, index) => (
                         <Button
                             key={index}
+                            buttonType="btn1"
                             icon={icons[index]}
                             text = {name} 
                         />
@@ -37,11 +38,11 @@ const Navbar = () => {
 
             <div className={styles.user}>
                 <Button 
-                    isBtn2={true}
+                    buttonType="btn2"
                     icon={<MdAccountCircle />}
                 />
                 <Button 
-                    isBtn2={true}
+                    buttonType="btn2"
                     icon={<BiSolidDish />}
                 />
             </div>

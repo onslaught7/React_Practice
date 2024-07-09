@@ -31,38 +31,6 @@
     max-width: 750px;
 }
 
-.greetings button {
-    color: var(--clr3);
-    border: none;
-    border-radius: 3rem;
-    background-color: var(--clr2);
-    display: flex;
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
-    max-width: 12rem;
-    align-items: center;
-    justify-content: center;
-    min-height: 3rem;
-    gap: 10px;
-    font-weight: 600;
-    margin-top: 3rem;
-    box-shadow: -4px 5px 2px rgb(100, 53, 34);
-    transition: all 0.3s ease;
-    transition: transform 0.2s ease;
-}
-
-.greetings button:hover {
-    /* background-color: var(--clr3); 
-    color: var(--clr2);  */
-    transform: scale(1.05); 
-    box-shadow: -9px 6px 4px rgb(100, 53, 34);
-}
-
-.greetings button:active {
-    transform: scale(0.96)
-}
-
 .greetings p img {
     width: 120px;
     padding: 0;
