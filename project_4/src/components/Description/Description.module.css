@@ -18,6 +18,7 @@
     position: relative; 
     display: flex;
     align-items: end;
+    height: 100%;
 }
 
 .item img {
@@ -42,7 +43,7 @@
 }
 
 .title {
-    color: var(--clr1);
+    color: var(--clr2);
     font-size: 90px;
     margin-bottom: 0;
 }
