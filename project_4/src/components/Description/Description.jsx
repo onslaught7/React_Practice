@@ -14,7 +14,7 @@ const Description = () => {
           <div className={styles.item}>
             
             <div className={styles.content}>
-              <h1 className={styles.title}>ABOUT US</h1>
+              <h1 className={styles.title}>We Deliver not Food but an Experience</h1>
               <p className={styles.description}>
               Welcome to our restaurant, where the essence of India comes alive in 
               every bite. Here, we don't just serve food; we serve a tradition, a culture, 

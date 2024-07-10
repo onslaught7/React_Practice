@@ -40,16 +40,20 @@
     background-color: rgba(0, 0, 0, 0.5);
     padding-bottom: 5rem;
     box-shadow: 0 0 50px 50px rgba(0, 0, 0, 0.5);
+    padding-left: 5rem;
 }
 
 .title {
     color: var(--clr2);
-    font-size: 90px;
-    margin-bottom: 0;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1;
 }
 
 .description {
     color: var(--clr4);
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .descPopularCardSlide {
