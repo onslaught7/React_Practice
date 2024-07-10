@@ -21,7 +21,7 @@
     height: 100%;
 }
 
-.item img {
+.backgroundImg {
     object-fit: cover;
     width: 100%;
     height: 100%;

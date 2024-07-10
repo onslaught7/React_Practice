@@ -31,9 +31,11 @@ const Description = () => {
               />
             </div>
 
-            <img src="/images/aboutUs.jpg"/>
+            <img className={styles.backgroundImg} src="/images/aboutUs.jpg"/>
           </div>
-          <div></div>
+          <div>
+
+          </div>
         </div>
 
         <div className={styles.descPopularCardSlide}>
