@@ -3,8 +3,13 @@ import Navbar from '../Navbar/Navbar'
 import styles from './Description.module.css';
 import Button from '../Button/Button';
 import { CgMoreVerticalR } from "react-icons/cg";
+import { useState } from 'react';
 
 const Description = () => {
+  const images = ['about1.jpg', 'about2.jpg', 'about3.jpg'];
+
+  const [setImage, handleSetImage] = useState(images[0])
+
   return (
     <div>
       <Navbar />
@@ -32,11 +37,16 @@ const Description = () => {
             </div>
 
             <div className={styles.cards}>
-              <img className={styles.cardImg} src="/images/aboutFood.jpg"/>
-              <img className={styles.cardImg} src="/images/aboutDining.jpg"/>
+              <div className={styles.card}>
+              <img className={styles.cardImg} src="/images/about2.jpg"/>
+              </div>
+
+              <div className={styles.card}>
+              <img className={styles.cardImg} src="/images/about3.jpg"/>
+              </div>
             </div>
 
-            <img className={styles.backgroundImg} src="/images/aboutUs.jpg"/>
+            <img className={styles.backgroundImg} src="/images/about1.jpg"/>
           </div>
           <div>
 
