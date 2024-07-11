@@ -8,11 +8,64 @@ import { useState } from 'react';
 const Description = () => {
   const images = ['about0.jpg', 'about1.jpg', 'about2.jpg'];
 
-  const [setImage, handleSetImage] = useState(images[0])
+  const titles = [
+    'We Deliver not Food but an Experience', 
+    'We Provide the Finest Indian Dining Experiences',
+    'Experience the Best and the Most Colorful Cuisine the Authentic Way'
+  ];
+
+  const descriptions = ["Welcome to our restaurant, where the essence of India comes alive in every bite. Here, we don't just serve food; we serve a tradition, a culture, and a story that spans generations. Our chefs craft each dish with authentic recipes and the freshest ingredients, ensuring every meal is a culinary masterpiece. We take pride in our rave reviews and loyal patrons who swear by our flavors. Come and taste for yourself why we're as exceptional as we claim to be. Your journey to India begins here.",
+    "Welcome to a world where luxury meets tradition in every dish. At our restaurant, we pride ourselves on offering the finest Indian dining experiences. Our chefs are artisans, meticulously preparing each meal with an unwavering commitment to quality and authenticity. From the tantalizing aromas to the exquisite presentation, every aspect of our service is designed to delight your senses. Indulge in a culinary journey that transcends ordinary dining and discover why we are the preferred destination for those seeking the pinnacle of Indian cuisine.",
+    "Step into a vibrant celebration of India's diverse culinary heritage. Our restaurant invites you to experience the best and most colorful cuisine the authentic way. Each dish is a testament to the rich tapestry of Indian flavors, prepared with traditional techniques and the finest ingredients. From the lively spices to the bold, fresh ingredients, we bring the true essence of India to your table. Join us for a dining experience that is as visually stunning as it is delicious, and let our food transport you to the heart of Indian culture."
+  ];
+
+  const [currentImage, setCurrentImage] = useState(images[0]);
+  const [image1, setImage1] = useState(images[1]);
+  const [image2, setImage2] = useState(images[2]);
+
+  const [currentTitle, setCurrentTitle] = useState(titles[0]);
+  const [title1, setTitle1] = useState(titles[1]);
+  const [title2, setTitle2] = useState(titles[2]);
+  
+  const [currentDescription, setCurrentDescription] = useState(descriptions[0]);
+  const [description1, setDescription1] = useState(descriptions[1]);
+  const [description2, setDescription2] = useState(descriptions[2]);
 
   const handleImageChange = (imageNum) => {
+    if (imageNum === 1) {
+      // Using callback function to ensure correct previous state is used
+      setCurrentImage((prevCurrentImage) => {
+        setImage1(prevCurrentImage); // Update image1 with the previous currentImage
+        return image1; // Set currentImage to image1
+      });
+      
+      setCurrentTitle((prevCurrentTitle) => {
+        setTitle1(prevCurrentTitle);
+        return titles[1];
+      });
 
-  }
+      setCurrentDescription((prevCurrentDescription) => {
+        setDescription1(prevCurrentDescription);
+        return descriptions[1];
+      });
+    } else if (imageNum === 2) {
+      // Using callback function to ensure correct previous state is used
+      setCurrentImage((prevCurrentImage) => {
+        setImage2(prevCurrentImage); // Update image2 with the previous currentImage
+        return image2; // Set currentImage to image2
+      });
+
+      setCurrentTitle((prevCurrentTitle) => {
+        setTitle1(prevCurrentTitle);
+        return titles[2];
+      });
+
+      setCurrentDescription((prevCurrentDescription) => {
+        setDescription1(prevCurrentDescription);
+        return descriptions[2];
+      });
+    }
+  };
 
   return (
     <div>
@@ -23,15 +76,9 @@ const Description = () => {
           <div className={styles.item}>
             
             <div className={styles.content}>
-              <h1 className={styles.title}>We Deliver not Food but an Experience</h1>
+              <h1 className={styles.title}>{currentTitle}</h1>
               <p className={styles.description}>
-              Welcome to our restaurant, where the essence of India comes alive in 
-              every bite. Here, we don't just serve food; we serve a tradition, a culture, 
-              and a story that spans generations. Our chefs craft each dish with authentic 
-              recipes and the freshest ingredients, ensuring every meal is a culinary masterpiece. 
-              We take pride in our rave reviews and loyal patrons who swear by our flavors. 
-              Come and taste for yourself why we're as exceptional as we claim to be. Your 
-              journey to India begins here.
+              {currentDescription}
               </p>
               <Button
                 buttonType="btn3"
@@ -42,19 +89,19 @@ const Description = () => {
 
             <div className={styles.cards}>
               <div className={styles.card}>
-              <img onClick={handleImageChange(1)} 
-              className={styles.cardImg} src="/images/about1.jpg"
+              <img onClick={() => handleImageChange(1)} 
+              className={styles.cardImg} src={`/images/${image1}`}
               />
               </div>
 
               <div className={styles.card}>
-              <img onClick={() => handleSetImage(images[2])} 
-              className={styles.cardImg} src="/images/about2.jpg"
+              <img onClick={() => handleImageChange(2)} 
+              className={styles.cardImg} src={`/images/${image2}`}
               />
               </div>
             </div>
 
-            <img className={styles.backgroundImg} src={`/images/${setImage}`}/>
+            <img className={styles.backgroundImg} src={`/images/${currentImage}`}/>
           </div>
           <div>
 
