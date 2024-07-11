@@ -31,16 +31,16 @@ const Description = () => {
               />
             </div>
 
+            <div className={styles.cards}>
+              <img className={styles.cardImg} src="/images/aboutFood.jpg"/>
+              <img className={styles.cardImg} src="/images/aboutDining.jpg"/>
+            </div>
+
             <img className={styles.backgroundImg} src="/images/aboutUs.jpg"/>
           </div>
           <div>
 
           </div>
-        </div>
-
-        <div className={styles.descPopularCardSlide}>
-          <div></div>
-          <div></div>
         </div>
       </div>
     </div>
