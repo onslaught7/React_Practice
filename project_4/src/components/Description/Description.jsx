@@ -6,9 +6,13 @@ import { CgMoreVerticalR } from "react-icons/cg";
 import { useState } from 'react';
 
 const Description = () => {
-  const images = ['about1.jpg', 'about2.jpg', 'about3.jpg'];
+  const images = ['about0.jpg', 'about1.jpg', 'about2.jpg'];
 
   const [setImage, handleSetImage] = useState(images[0])
+
+  const handleImageChange = (imageNum) => {
+
+  }
 
   return (
     <div>
@@ -38,15 +42,19 @@ const Description = () => {
 
             <div className={styles.cards}>
               <div className={styles.card}>
-              <img className={styles.cardImg} src="/images/about2.jpg"/>
+              <img onClick={handleImageChange(1)} 
+              className={styles.cardImg} src="/images/about1.jpg"
+              />
               </div>
 
               <div className={styles.card}>
-              <img className={styles.cardImg} src="/images/about3.jpg"/>
+              <img onClick={() => handleSetImage(images[2])} 
+              className={styles.cardImg} src="/images/about2.jpg"
+              />
               </div>
             </div>
 
-            <img className={styles.backgroundImg} src="/images/about1.jpg"/>
+            <img className={styles.backgroundImg} src={`/images/${setImage}`}/>
           </div>
           <div>
 
