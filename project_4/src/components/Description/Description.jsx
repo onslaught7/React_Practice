@@ -20,50 +20,24 @@ const Description = () => {
   ];
 
   const [currentImage, setCurrentImage] = useState(images[0]);
-  const [image1, setImage1] = useState(images[1]);
-  const [image2, setImage2] = useState(images[2]);
 
   const [currentTitle, setCurrentTitle] = useState(titles[0]);
-  const [title1, setTitle1] = useState(titles[1]);
-  const [title2, setTitle2] = useState(titles[2]);
   
   const [currentDescription, setCurrentDescription] = useState(descriptions[0]);
-  const [description1, setDescription1] = useState(descriptions[1]);
-  const [description2, setDescription2] = useState(descriptions[2]);
 
-  const handleImageChange = (imageNum) => {
-    if (imageNum === 1) {
-      // Using callback function to ensure correct previous state is used
-      setCurrentImage((prevCurrentImage) => {
-        setImage1(prevCurrentImage); // Update image1 with the previous currentImage
-        return image1; // Set currentImage to image1
-      });
-      
-      setCurrentTitle((prevCurrentTitle) => {
-        setTitle1(prevCurrentTitle);
-        return titles[1];
-      });
-
-      setCurrentDescription((prevCurrentDescription) => {
-        setDescription1(prevCurrentDescription);
-        return descriptions[1];
-      });
+  const handleImageChange =(imageNum) => {
+    if (imageNum === 0) {
+      setCurrentImage(images[0]);
+      setCurrentTitle(titles[0]);
+      setCurrentDescription(descriptions[0]);
+    } else if (imageNum === 1) {
+      setCurrentImage(images[1]);
+      setCurrentTitle(titles[1]);
+      setCurrentDescription(descriptions[1]);
     } else if (imageNum === 2) {
-      // Using callback function to ensure correct previous state is used
-      setCurrentImage((prevCurrentImage) => {
-        setImage2(prevCurrentImage); // Update image2 with the previous currentImage
-        return image2; // Set currentImage to image2
-      });
-
-      setCurrentTitle((prevCurrentTitle) => {
-        setTitle1(prevCurrentTitle);
-        return titles[2];
-      });
-
-      setCurrentDescription((prevCurrentDescription) => {
-        setDescription1(prevCurrentDescription);
-        return descriptions[2];
-      });
+      setCurrentImage(images[2]);
+      setCurrentTitle(titles[2]);
+      setCurrentDescription(descriptions[2]);
     }
   };
 
@@ -74,7 +48,9 @@ const Description = () => {
       <div className={`${styles.slider} container`}>
         <div className={styles.list}>
           <div className={styles.item}>
-            
+            {
+              
+            }
             <div className={styles.content}>
               <h1 className={styles.title}>{currentTitle}</h1>
               <p className={styles.description}>
@@ -88,15 +64,21 @@ const Description = () => {
             </div>
 
             <div className={styles.cards}>
-              <div className={styles.card}>
-              <img onClick={() => handleImageChange(1)} 
-              className={styles.cardImg} src={`/images/${image1}`}
+            <div className={styles.card}>
+              <img onClick={() => { handleImageChange(0) }} 
+              className={styles.cardImg} src={`/images/${images[0]}`}
               />
               </div>
 
               <div className={styles.card}>
-              <img onClick={() => handleImageChange(2)} 
-              className={styles.cardImg} src={`/images/${image2}`}
+              <img onClick={() => { handleImageChange(1) }} 
+              className={styles.cardImg} src={`/images/${images[1]}`}
+              />
+              </div>
+
+              <div className={styles.card}>
+              <img onClick={() => { handleImageChange(2) }} 
+              className={styles.cardImg} src={`/images/${images[2]}`}
               />
               </div>
             </div>
