@@ -1,0 +1,84 @@
+.ldnPage {
+    display: flex;
+    width: 100%;
+}
+
+.greetings {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    min-width: 1200px;
+}
+
+.greetings h1 {
+    color: var(--clr2);
+    font-size: 120px;
+    margin-bottom: 1.5rem;
+    line-height: 150px;
+}
+
+.leaf {
+    padding-left: 3.5rem;
+    font-size: 125px;
+}
+
+
+.greetings p {
+    color: var(--clr3);
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    max-width: 750px;
+}
+
+.greetings p img {
+    width: 120px;
+    padding: 0;
+    margin: 0;
+}
+
+.greetImg {
+    margin-top: 7rem;
+    overflow-x: hidden;
+    min-width: 628px;
+    margin-left: -2rem;
+}
+
+.greetImg img {
+    width: 40rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: center; /* Center the logo horizontally */
+    margin-top: 7.5rem;
+    position: relative; /* Needed for the absolute positioning of the lines */
+  }
+  
+  .logo::before,
+  .logo::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Center the lines vertically */
+    width: 45rem; /* Adjust width as needed */
+    height: 2px; /* Adjust height (thickness) as needed */
+    background-color: var(--clr2); /* Adjust color as needed */
+  }
+  
+  .logo::before {
+    left: 110px; /* Position the line to the left */
+    margin-right: 1rem; /* Space between the line and the logo */
+  }
+  
+  .logo::after {
+    right: 110px; /* Position the line to the right */
+    margin-left: 1rem; /* Space between the line and the logo */
+  }
+  
+  .logo img {
+    width: 12rem;
+    cursor: pointer;
+    display: block; /* Ensure there is no gap below the image */
+  }
+  
