@@ -10,8 +10,8 @@ const PopularityPage = () => {
   const foods = ["food1.png", "food2.png", "food3.png", "food4.png", 
     "food5.png", "food6.png", "food7.png", "food8.png"];
 
-  const foodTitles = ["Egg Biriyani", "Butter Chicken", "Samosa", "Garlic Naan",
-    "Cauliflower Sabji", "Aloo Chole", "Chef's Special Samosa", "Jeera Rice and Chicken Curry"
+  const foodTitles = ["Chicken Dum Biriyani", "Butter Chicken", "Samosa", "Garlic Naan",
+    "Cauliflower and Potato Curry", "Aloo Chole", "Chef's Special Samosa", "Jeera Rice and Chicken Curry"
   ];
 
   return (
