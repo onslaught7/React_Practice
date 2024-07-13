@@ -54,6 +54,7 @@
     justify-content: center; /* Center the logo horizontally */
     margin-top: 7.5rem;
     position: relative; /* Needed for the absolute positioning of the lines */
+    margin-bottom: 3.8rem;
   }
   
   .logo::before,
