@@ -7,8 +7,8 @@ import { FaSortAmountDown } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
 
 const PopularityPage = () => {
-  const foods = ["food1.png", "food2.png", "food3.png", "food4.png", 
-    "food5.png", "food6.png", "food7.png", "food8.png"];
+  const foods = ["food1.jpg", "food2.jpg", "food3.jpg", "food4.jpg", 
+    "food5.jpg", "food6.jpg", "food7.jpg", "food8.jpg"];
 
   const foodTitles = ["Chicken Dum Biriyani", "Butter Chicken", "Samosa", "Garlic Naan",
     "Cauliflower and Potato Curry", "Aloo Chole", "Chef's Special Samosa", "Jeera Rice and Chicken Curry"
