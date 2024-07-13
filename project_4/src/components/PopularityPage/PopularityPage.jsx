@@ -4,6 +4,7 @@ import styles from './PopularityPage.module.css'
 import { FaFilter } from "react-icons/fa";
 import Button from '../Button/Button';
 import { FaSortAmountDown } from "react-icons/fa";
+import { IoMdAdd } from "react-icons/io";
 
 const PopularityPage = () => {
   const foods = ["food1.png", "food2.png", "food3.png", "food4.png", 
@@ -46,7 +47,7 @@ const PopularityPage = () => {
                 </div>
                 <div className={styles.card_title}>
                   <p>{foodTitles[index]}</p>
-                  <button>+</button>
+                  <button><IoMdAdd/></button>
                 </div>
               </div>
             )

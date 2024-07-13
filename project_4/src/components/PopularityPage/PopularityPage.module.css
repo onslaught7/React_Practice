@@ -60,7 +60,7 @@
 }
 
 .card_title button{
-    max-height: 16%;
+    max-height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,6 +70,7 @@
     color: var(--clr1);
     border: 1px solid var(--clr1);
     background-color: var(--clr2);
+    font-weight: 700;
 }
 
 .card img {
