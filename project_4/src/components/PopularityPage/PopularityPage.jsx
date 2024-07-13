@@ -36,13 +36,18 @@ const PopularityPage = () => {
             />
           </div>
         </div>
-        
+
         <div className={styles.popularity_cards}> 
           {
             foods.map((name, index) => 
               <div className={styles.card} key={index}>
-                <div><img src={`/images/${name}`}/></div>
-                <div><p>{foodTitles[index]}</p></div>
+                <div className={styles.card_img}>
+                  <img src={`/images/${name}`}/>
+                </div>
+                <div className={styles.card_title}>
+                  <p>{foodTitles[index]}</p>
+                  <button>+</button>
+                </div>
               </div>
             )
           }
