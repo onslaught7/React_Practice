@@ -27,13 +27,13 @@
     background-color: transparent;
     display: flex;
     cursor: pointer;
-    min-width: 50px;
-    min-height: 50px;
-    font-size: 35px;
+    min-width: 30px;
+    min-height: 38px;
+    font-size: 25px;
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    border-radius: 50px;
+    border-radius: 50%;
     transition: all 0.2s ease-in-out;
   }
 
