@@ -5,11 +5,6 @@
     border: 2px solid var(--clr4);
 }
 
-.popularity_cards{
-    height: 100%;
-    width: 100%;
-}
-
 .btns_container{
     display: flex;
     justify-content: end;
@@ -25,8 +20,17 @@
     border-radius: 30px;
 }
 
+.popularity_cards{
+    height: 100%;
+    width: 100%;
+}
+
 .card {
     border: 2px solid var(--clr2);
     width: 15%;
     height: 25%;
+}
+
+.card img {
+    width: 75%;
 }

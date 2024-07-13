@@ -17,31 +17,32 @@ const PopularityPage = () => {
     <div>
     <Navbar />
       <div className={`${styles.popularity_container} container`}>
-        <div className={styles.popularity_cards}>
-          <div className={styles.btns_container}>
-            <div className={styles.filter_btns}>
-              <Button 
-                buttonType="btn1"
-                icon=<FaSortAmountDown />
-                text={"ORDERS"}
-              />
-              <Button 
-                buttonType="btn1"
-                icon=<FaSortAmountDown />
-                text={"RATINGS"}
-              />
-              <Button 
-                buttonType="btn1"
-                icon=<FaFilter />
-                text={"FILTERS"}
-              />
-            </div>
+        <div className={styles.btns_container}>
+          <div className={styles.filter_btns}>
+            <Button 
+              buttonType="btn1"
+              icon=<FaSortAmountDown />
+              text={"ORDERS"}
+            />
+            <Button 
+              buttonType="btn1"
+              icon=<FaSortAmountDown />
+              text={"RATINGS"}
+            />
+            <Button 
+              buttonType="btn1"
+              icon=<FaFilter />
+              text={"FILTERS"}
+            />
           </div>
+        </div>
+        
+        <div className={styles.popularity_cards}> 
           {
             foods.map((name, index) => 
               <div className={styles.card} key={index}>
-                <img src=""/>
-                <p>{name}</p>
+                <div><img src={`/images/${name}`}/></div>
+                <div><p>{foodTitles[index]}</p></div>
               </div>
             )
           }
