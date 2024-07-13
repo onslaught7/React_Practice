@@ -3,24 +3,41 @@ import Navbar from '../Navbar/Navbar'
 import styles from './PopularityPage.module.css'
 import { FaFilter } from "react-icons/fa";
 import Button from '../Button/Button';
+import { FaSortAmountDown } from "react-icons/fa";
 
 const PopularityPage = () => {
   const foods = ["food1.png", "food2.png", "food3.png", "food4.png", 
     "food5.png", "food6.png", "food7.png", "food8.png"];
 
-  const foodTitles = [];
+  const foodTitles = ["Egg Biriyani", "Butter Chicken", "Samosa", "Garlic Naan",
+    "Cauliflower Sabji", "Aloo Chole", "Chef's Special Samosa", "Jeera Rice and Chicken Curry"
+  ];
 
   return (
     <div>
     <Navbar />
       <div className={`${styles.popularity_container} container`}>
         <div className={styles.popularity_cards}>
-          <div className={styles.filter_btns}>
-          <Button 
-            buttonType="btn2"
-            icon=<FaFilter fontSize={"1.2rem"}/>
-          />
+          <div className={styles.btns_container}>
+            <div className={styles.filter_btns}>
+              <Button 
+                buttonType="btn1"
+                icon=<FaSortAmountDown />
+                text={"ORDERS"}
+              />
+              <Button 
+                buttonType="btn1"
+                icon=<FaSortAmountDown />
+                text={"RATINGS"}
+              />
+              <Button 
+                buttonType="btn1"
+                icon=<FaFilter />
+                text={"FILTERS"}
+              />
+            </div>
           </div>
+
           <div className={styles.card}>
             <img src=""/>
           </div>
