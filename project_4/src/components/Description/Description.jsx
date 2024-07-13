@@ -55,7 +55,7 @@ const Description = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className={`${styles.slider} container`}>
         <div className={styles.list}>
@@ -92,6 +92,9 @@ const Description = () => {
             <img className={styles.backgroundImg} src={`/images/${currentImage}`} />
           </div>
         </div>
+      </div>
+      <div className={styles.logo}>
+        <img src="/images/logo_txt.png"></img>
       </div>
     </div>
   );

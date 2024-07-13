@@ -131,3 +131,39 @@
 .description.slide-in {
     animation: slideIn 1s forwards;
 }
+
+/* bottom logo and lines */
+.logo {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: center; /* Center the logo horizontally */
+    margin-top: 4rem;
+    position: relative; /* Needed for the absolute positioning of the lines */
+    margin-bottom: 3.8rem;
+  }
+  
+  .logo::before,
+  .logo::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Center the lines vertically */
+    width: 45rem; /* Adjust width as needed */
+    height: 2px; /* Adjust height (thickness) as needed */
+    background-color: var(--clr2); /* Adjust color as needed */
+  }
+  
+  .logo::before {
+    left: 110px; /* Position the line to the left */
+    margin-right: 1rem; /* Space between the line and the logo */
+  }
+  
+  .logo::after {
+    right: 110px; /* Position the line to the right */
+    margin-left: 1rem; /* Space between the line and the logo */
+  }
+  
+  .logo img {
+    width: 12rem;
+    cursor: pointer;
+    display: block; /* Ensure there is no gap below the image */
+  }
