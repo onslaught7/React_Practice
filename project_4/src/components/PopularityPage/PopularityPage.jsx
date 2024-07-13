@@ -37,10 +37,14 @@ const PopularityPage = () => {
               />
             </div>
           </div>
-
-          <div className={styles.card}>
-            <img src=""/>
-          </div>
+          {
+            foods.map((name, index) => 
+              <div className={styles.card} key={index}>
+                <img src=""/>
+                <p>{name}</p>
+              </div>
+            )
+          }
         </div>
       </div>
     </div>
