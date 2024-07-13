@@ -55,7 +55,7 @@ const Description = () => {
 
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
 
       <div className={`${styles.slider} container`}>
         <div className={styles.list}>
