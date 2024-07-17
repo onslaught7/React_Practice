@@ -8,7 +8,6 @@ import Button from '../Button/Button';
 const LandingPage = () => {
   return (
     <div>
-    <Navbar />
       <div className={`${styles.ldnPage} container`}>
         <div className={styles.greetings}>
           <h1>YOUR INDIAN <GiLindenLeaf className={styles.leaf}/> CULINARY DREAM</h1>

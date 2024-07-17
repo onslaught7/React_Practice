@@ -28,7 +28,6 @@ const PopularityPage = () => {
 
   return (
     <div>
-    <Navbar />
       <div className={`${styles.popularity_container} container`}>
         <div className={styles.btns_container}>
           <h1>Our Most Pouplar</h1>

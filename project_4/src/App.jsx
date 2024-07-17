@@ -7,14 +7,32 @@ import  ContactUs from '../src/components/ContactUs/ContactUs'
 import './App.css'
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("Home");
+
+  const renderPage = () => {
+    switch(currentPage){
+      case "HOME":
+        return <LandingPage />
+      case "MENU":
+        return <Menu />
+      case "POPULAR":
+        return <PopularityPage />
+      case "ABOUT":
+        return <Description />
+      case "CONTACT":
+        return <ContactUs />
+      default:
+        return <LandingPage />
+    }
+  };
 
   return (
     <div>
-      <LandingPage />
-      {/* <Description /> */}
-      <PopularityPage />
-      {/* <ContactUs /> */}
+      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      {renderPage()}
     </div>
+    
+
   )
 }
 

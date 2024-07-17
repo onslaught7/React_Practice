@@ -7,9 +7,10 @@ import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { MdAccountCircle } from "react-icons/md";
 import { BiSolidDish } from "react-icons/bi";
 import { IoMdTrendingUp } from "react-icons/io";
+import { useState } from 'react';
 
 
-const Navbar = () => {
+const Navbar = ({currentPage, setCurrentPage}) => {
     const icons = [
     <LuMenuSquare />, <IoMdTrendingUp />,
     <FaRegCircleQuestion />, <MdOutlineMarkEmailUnread />
@@ -20,7 +21,9 @@ const Navbar = () => {
     return (
         <nav className={`${styles.navbar} container`}>
             <div className={styles.logo}>
-                <img src="/images/logo_txt.png"></img>
+                <img src="/images/logo_txt.png"
+                    onClick={() => setCurrentPage("HOME")}
+                />
             </div>
 
             <div className={styles.navBtns}>
@@ -31,6 +34,7 @@ const Navbar = () => {
                             buttonType="btn1"
                             icon={icons[index]}
                             text = {name} 
+                            onClick={() => setCurrentPage(name)}
                         />
                     ))
                 }
