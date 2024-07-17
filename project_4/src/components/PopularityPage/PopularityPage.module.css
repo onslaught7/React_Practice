@@ -74,7 +74,7 @@
     flex-grow: 1;
     font-weight: 600;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Number of lines to show */
+    /* -webkit-line-clamp: 2;  Number of lines to show */
     -webkit-box-orient: vertical;
     white-space: normal; /* Needed to allow wrapping */
     text-overflow: ellipsis;
