@@ -22,11 +22,16 @@ const PopularityPage = () => {
     "Jeera Rice and Chicken Curry",
   ];
 
+  const handleClick = () => {
+    
+  } 
+
   return (
     <div>
     <Navbar />
       <div className={`${styles.popularity_container} container`}>
         <div className={styles.btns_container}>
+          <h1>Our Most Pouplar</h1>
           <div className={styles.filter_btns}>
             <Button 
               buttonType="btn1"
@@ -55,7 +60,9 @@ const PopularityPage = () => {
                 </div>
                 <div className={styles.card_title}>
                   <p>{foodTitles[index]}</p>
-                  <button><IoMdAdd/></button>
+                  <button onClick={() => handleClick}>
+                    <IoMdAdd/>
+                  </button>
                 </div>
               </div>
             )
