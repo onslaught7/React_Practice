@@ -68,7 +68,7 @@
 }
 
 .card {
-    border: 2px solid var(--clr2);
+    /* border: 2px solid var(--clr2); */
     width: calc((100% / 8) - 2rem);
     /* width: 15%; */
     height: 25%;
@@ -114,7 +114,7 @@
     transition: 0.2s ease-in-out;
 }
 
-.card_title button{
+.card_title .addFood{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,7 +127,24 @@
     font-size: 18px;
 }
 
-.card_title button:hover {
+.foodCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 6%;
+    right: 2%;
+    color: var(--clr1);
+    font-size: 14px;
+    height: 28%;
+}
+
+.foodCount button {
+    border: 2px solid var(--clr1);
+    background-color: var(--clr2);
+}
+
+.card_title .addFood:hover {
     background-color: var(--clr1);
     color: var(--clr2);
     cursor: pointer;
@@ -144,4 +161,10 @@
 
 .card img:hover {
     scale: 1.2;
+}
+
+.foodCount button:hover {
+    background-color: var(--clr1);
+    color: var(--clr2);
+    cursor: pointer;
 }

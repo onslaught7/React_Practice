@@ -5,6 +5,8 @@ import { FaFilter } from "react-icons/fa";
 import Button from '../Button/Button';
 import { FaSortAmountDown } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
+import { BsDashLg } from "react-icons/bs";
+import { useState } from 'react';
 
 const PopularityPage = () => {
   const foods = ["food1.jpg", "food2.jpg", "food3.jpg", "food4.jpg", 
@@ -22,9 +24,7 @@ const PopularityPage = () => {
     "Jeera Rice and Chicken Curry",
   ];
 
-  const handleClick = () => {
-    
-  } 
+  const [addItem, setAddItem] = useState("Add");
 
   return (
     <div>
@@ -59,9 +59,24 @@ const PopularityPage = () => {
                 </div>
                 <div className={styles.card_title}>
                   <p>{foodTitles[index]}</p>
-                  <button onClick={() => handleClick}>
+                  {
+                  addItem === "Add" ? 
+                  <button 
+                  className={styles.addFood}
+                  onClick={() => setAddItem("Sub")}>
                     <IoMdAdd/>
-                  </button>
+                  </button> 
+                  : 
+                  <div className={styles.foodCount}>
+                    <button>
+                      <BsDashLg/> 
+                    </button>
+                    <p>1</p>
+                    <button>
+                      <IoMdAdd/> 
+                    </button>
+                  </div>
+                  }
                 </div>
               </div>
             )
