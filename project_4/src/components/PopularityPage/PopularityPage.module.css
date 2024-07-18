@@ -136,16 +136,19 @@
     color: var(--clr1);
     font-size: 14px;
     height: 28%;
+    transition: slideIn 0.5s forwards;
 }
 
 .foodCount button {
     border: 2px solid var(--clr1);
     background-color: var(--clr2);
+    transition: 0.3s ease-in-out;
 }
 
 .foodCount p {
     position: relative;
     bottom: 25%;
+    transition: slideIn 5s forwards;
 }
 
 .card_title .addFood:hover {
