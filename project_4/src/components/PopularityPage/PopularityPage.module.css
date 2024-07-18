@@ -129,7 +129,6 @@
 
 .foodCount {
     display: flex;
-    justify-content: center;
     align-items: center;
     position: relative;
     bottom: 6%;
@@ -142,6 +141,11 @@
 .foodCount button {
     border: 2px solid var(--clr1);
     background-color: var(--clr2);
+}
+
+.foodCount p {
+    position: relative;
+    bottom: 25%;
 }
 
 .card_title .addFood:hover {
