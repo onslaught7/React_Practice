@@ -93,9 +93,9 @@ const Description = () => {
           </div>
         </div>
       </div>
-      <div className={styles.logo}>
+      {/* <div className={styles.logo}>
         <img src="/images/logo_txt.png"></img>
-      </div>
+      </div> */}
     </div>
   );
 };
