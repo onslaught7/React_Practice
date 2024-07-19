@@ -69,6 +69,7 @@
     height: 12%;
     width: 12%;
     gap: 2rem;
+    animation: slideIn 1s forwards;
 }
 
 .cardImg {
@@ -87,7 +88,6 @@
     border-radius: 20px;
     transition: all 0.6s ease;
     transition: transform 0.3s ease-in-out;
-    animation: slideIn 1s forwards;
 }
 
 .card:hover {

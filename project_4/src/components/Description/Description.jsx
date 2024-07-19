@@ -74,17 +74,17 @@ const Description = () => {
 
             <div className={styles.cards}>
               <div className={styles.card}>
-                <img onClick={() => { handleImageChange(0) }} 
+                <img loading="lazy" onClick={() => { handleImageChange(0) }} 
                 className={styles.cardImg} src={`/images/${images[0]}`} />
               </div>
 
               <div className={styles.card}>
-                <img onClick={() => { handleImageChange(1) }} 
+                <img loading="lazy" onClick={() => { handleImageChange(1) }} 
                 className={styles.cardImg} src={`/images/${images[1]}`} />
               </div>
 
               <div className={styles.card}>
-                <img onClick={() => { handleImageChange(2) }} 
+                <img loading="lazy" onClick={() => { handleImageChange(2) }} 
                 className={styles.cardImg} src={`/images/${images[2]}`} />
               </div>
             </div>
