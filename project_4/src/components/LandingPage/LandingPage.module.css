@@ -76,7 +76,7 @@
     overflow-x: hidden;
     min-width: 628px;
     margin-left: -5rem;
-    animation: fadeInSlideInimg 0.6s ease-in, float 3s ease-in-out infinite;
+    animation: fadeInSlideInimg 0.6s ease-in, float 2s ease-in-out infinite;
     border-radius: 50%;
     box-shadow: -20px 35px 15px rgba(0, 0, 0, 0.2);
 }
