@@ -1,12 +1,9 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import styles from './PopularityPage.module.css'
-import { FaFilter } from "react-icons/fa";
+import React, { useState } from 'react';
+import { FaFilter, FaSortAmountDown } from 'react-icons/fa';
+import { IoMdAdd } from 'react-icons/io';
+import { BsDashLg } from 'react-icons/bs';
+import styles from './PopularityPage.module.css';
 import Button from '../Button/Button';
-import { FaSortAmountDown } from "react-icons/fa";
-import { IoMdAdd } from "react-icons/io";
-import { BsDashLg } from "react-icons/bs";
-import { useState } from 'react';
 
 const PopularityPage = () => {
   const foods = ["food1.jpg", "food2.jpg", "food3.jpg", "food4.jpg", 
@@ -24,58 +21,80 @@ const PopularityPage = () => {
     "Jeera Rice and Chicken Curry",
   ];
 
-  const [addItem, setAddItem] = useState("Add");
+  const [counts, setCounts] = useState(Array(foods.length).fill(0));
+
+  const handleAddClick = (index) => {
+    const newCounts = [...counts];
+    newCounts[index] = 1;
+    setCounts(newCounts);
+  };
+
+  const handleIncrement = (index) => {
+    const newCounts = [...counts];
+    newCounts[index] += 1;
+    setCounts(newCounts);
+  };
+
+  const handleDecrement = (index) => {
+    const newCounts = [...counts];
+    if (newCounts[index] > 1) {
+      newCounts[index] -= 1;
+    } else {
+      newCounts[index] = 0;
+    }
+    setCounts(newCounts);
+  };
 
   return (
     <div>
       <div className={`${styles.popularity_container} container`}>
         <div className={styles.btns_container}>
-          <h1>Our Most Pouplar</h1>
+          <h1>Our Most Popular</h1>
           <div className={styles.filter_btns}>
             <Button 
               buttonType="btn1"
-              icon=<FaSortAmountDown />
+              icon={<FaSortAmountDown />}
               text={"ORDERS"}
             />
             <Button 
               buttonType="btn1"
-              icon=<FaSortAmountDown />
+              icon={<FaSortAmountDown />}
               text={"RATINGS"}
             />
             <Button 
               buttonType="btn1"
-              icon=<FaFilter />
+              icon={<FaFilter />}
               text={"FILTERS"}
             />
           </div>
         </div>
 
-        <div className={styles.popularity_cards}> 
+        <div className={styles.popularity_cards}>
           {
             foods.map((name, index) => 
               <div className={styles.card} key={index}>
                 <div className={styles.card_img}>
-                  <img src={`/images/${name}`}/>
+                  <img src={`/images/${name}`} alt={foodTitles[index]} />
                 </div>
                 <div className={styles.card_title}>
                   <p>{foodTitles[index]}</p>
                   {
-                  addItem === "Add" ? 
-                  <button 
-                  className={styles.addFood}
-                  onClick={() => setAddItem("Sub")}>
-                    <IoMdAdd/>
-                  </button> 
-                  : 
-                  <div className={styles.foodCount}>
-                    <button>
-                      <BsDashLg/> 
-                    </button>
-                    <p>1</p>
-                    <button>
-                      <IoMdAdd/> 
-                    </button>
-                  </div>
+                    counts[index] === 0 ? 
+                    <button 
+                      className={styles.addFood}
+                      onClick={() => handleAddClick(index)}>
+                      <IoMdAdd />
+                    </button> 
+                    : 
+                    <div className={styles.foodCount}>
+                      <button onClick={() => handleDecrement(index)}>
+                        <BsDashLg />
+                      </button>
+                      <p>{counts[index]}</p>
+                      <button onClick={() => handleIncrement(index)}>
+                        <IoMdAdd />
+                      </button>
+                    </div>
                   }
                 </div>
               </div>
@@ -84,7 +103,7 @@ const PopularityPage = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default PopularityPage
+export default PopularityPage;
