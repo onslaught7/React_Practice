@@ -17,7 +17,7 @@
     align-items: center;
     gap: 81px;
     justify-content: center;
-    height: 87vh;
+    height: 100vh;
     animation: fadeInSlideIn 0.3s ease-in;
 }
 
@@ -38,6 +38,7 @@ form {
     border: 2px solid var(--clr2);
     padding: 1.5rem;
     border-radius: 8px;
+    width: 100%;
 }
 
 .form_input {
@@ -63,13 +64,6 @@ form {
     border-radius: 8px;
 }
 
-.form_input textarea {
-    color: var(--clr3);
-    border: 2px solid var(--clr2);
-    background-color: var(--clr1);
-    border-radius: 8px;
-}
-
 .form_input label {
     position: absolute;
     top: -11px;
@@ -80,8 +74,9 @@ form {
     color: var(--clr2);
 }
 
-.form_image {
-    color: var(--clr2);
-    font-Size: 28rem;
-    padding-top: 9rem;
+
+.submit_btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }

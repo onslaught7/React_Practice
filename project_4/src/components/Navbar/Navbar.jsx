@@ -44,6 +44,7 @@ const Navbar = ({currentPage, setCurrentPage}) => {
                 <Button 
                     buttonType="btn2"
                     icon={<MdAccountCircle />}
+                    onClick={() => setCurrentPage('SIGNUP')}
                 />
                 <Button 
                     buttonType="btn2"
