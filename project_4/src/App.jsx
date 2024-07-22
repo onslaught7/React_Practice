@@ -2,10 +2,11 @@ import { useState } from 'react'
 import Navbar from './components/Navbar/Navbar.jsx'
 import  LandingPage from '../src/components/LandingPage/LandingPage.jsx'
 import  Description from '../src/components/Description/Description'
-import  PopularityPage from '../src/components/PopularityPage/PopularityPage'
 import  ContactUs from '../src/components/ContactUs/ContactUs'
 import Chef from '../src/components/Chef/Chef.jsx'
+import MenuPage from '../src/components/MenuPage/MenuPage.jsx'
 import './App.css'
+
 
 function App() {
   const [currentPage, setCurrentPage] = useState("HOME");
@@ -16,8 +17,8 @@ function App() {
         return <LandingPage />
       case "CHEFS":
         return <Chef />
-      case "POPULAR":
-        return <PopularityPage />
+      case "MENU":
+        return <MenuPage />
       case "ABOUT":
         return <Description />
       case "CONTACT":

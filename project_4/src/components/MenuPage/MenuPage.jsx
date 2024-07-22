@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { FaFilter, FaSortAmountDown } from 'react-icons/fa';
 import { IoMdAdd } from 'react-icons/io';
 import { BsDashLg } from 'react-icons/bs';
-import styles from './PopularityPage.module.css';
+import styles from './MenuPage.module.css';
 import Button from '../Button/Button';
 
-const PopularityPage = () => {
+const MenuPage = () => {
   const foods = ["food1.jpg", "food2.jpg", "food3.jpg", "food4.jpg", 
     "food5.jpg", "food6.jpg", "food7.jpg", "food8.jpg", "food1.jpg", 
     "food2.jpg", "food3.jpg", "food4.jpg", "food5.jpg", "food6.jpg", 
@@ -106,4 +106,4 @@ const PopularityPage = () => {
   );
 }
 
-export default PopularityPage;
+export default MenuPage;
