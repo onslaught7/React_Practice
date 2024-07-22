@@ -7,16 +7,17 @@ import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { MdAccountCircle } from "react-icons/md";
 import { BiSolidDish } from "react-icons/bi";
 import { IoMdTrendingUp } from "react-icons/io";
+import { PiChefHatBold } from "react-icons/pi";
 import { useState } from 'react';
 
 
 const Navbar = ({currentPage, setCurrentPage}) => {
     const icons = [
-    <LuMenuSquare />, <IoMdTrendingUp />,
+    <PiChefHatBold />, <IoMdTrendingUp />,
     <FaRegCircleQuestion />, <MdOutlineMarkEmailUnread />
     ]
 
-    const btnNames = ['MENU', 'POPULAR', 'ABOUT', 'CONTACT']
+    const btnNames = ['CHEFS', 'POPULAR', 'ABOUT', 'CONTACT']
 
     return (
         <nav className={`${styles.navbar} container`}>

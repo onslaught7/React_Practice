@@ -4,18 +4,18 @@ import  LandingPage from '../src/components/LandingPage/LandingPage.jsx'
 import  Description from '../src/components/Description/Description'
 import  PopularityPage from '../src/components/PopularityPage/PopularityPage'
 import  ContactUs from '../src/components/ContactUs/ContactUs'
-import Menu from '../src/components/Menu/Menu.jsx'
+import Chef from '../src/components/Chef/Chef.jsx'
 import './App.css'
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("Home");
+  const [currentPage, setCurrentPage] = useState("HOME");
 
   const renderPage = () => {
     switch(currentPage){
       case "HOME":
         return <LandingPage />
-      case "MENU":
-        return <Menu />
+      case "CHEFS":
+        return <Chef />
       case "POPULAR":
         return <PopularityPage />
       case "ABOUT":
