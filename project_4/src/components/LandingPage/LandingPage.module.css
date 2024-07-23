@@ -36,6 +36,7 @@
     display: flex;
     width: 100%;
     animation: fadeInSlideIn 0.6s ease-in;
+    position: relative;
 }
 
 .greetings {
@@ -89,7 +90,7 @@
     display: flex;
     align-items: center; /* Align items vertically centered */
     justify-content: center; /* Center the logo horizontally */
-    margin-top: 7.5rem;
+    margin-top: 7rem;
     position: relative; /* Needed for the absolute positioning of the lines */
     margin-bottom: 3.8rem;
   }

@@ -49,6 +49,7 @@ const Navbar = ({currentPage, setCurrentPage}) => {
                 <Button 
                     buttonType="btn2"
                     icon={<BiSolidDish />}
+                    onClick={() => setCurrentPage('TRAY')}
                 />
             </div>
         </nav>
